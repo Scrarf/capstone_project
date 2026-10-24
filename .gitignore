@@ -2,3 +2,4 @@
 *.lck
 design-backups*
 _autosave*
+.claude/
