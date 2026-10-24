@@ -1,1 +1,4 @@
 *.blend1
+*.lck
+design-backups*
+_autosave*

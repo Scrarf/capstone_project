@@ -1,0 +1,60 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "bf91a2a1-39e8-4288-9578-4f96a46c0a9c")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 114.046 69.85)
+		(size 40.132 55.88)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 72 72 72 1)
+		)
+		(uuid "81c89536-a9d9-4069-a961-2d1af13393cf")
+		(property "Sheetname" "electrode"
+			(at 114.046 69.1384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "electrode.kicad_sch"
+			(at 114.046 126.3146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "design"
+				(path "/bf91a2a1-39e8-4288-9578-4f96a46c0a9c"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
