@@ -6,8 +6,8 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 114.046 69.85)
-		(size 40.132 55.88)
+		(at 124.46 88.9)
+		(size 25.4 24.13)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -22,7 +22,7 @@
 		)
 		(uuid "81c89536-a9d9-4069-a961-2d1af13393cf")
 		(property "Sheetname" "electrode"
-			(at 114.046 69.1384 0)
+			(at 124.46 88.1884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -33,7 +33,7 @@
 			)
 		)
 		(property "Sheetfile" "electrode.kicad_sch"
-			(at 114.046 126.3146 0)
+			(at 124.46 113.6146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
