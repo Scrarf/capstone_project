@@ -1,0 +1,109 @@
+* Flyby clock distribution to 4x CH32L103K8U6 OSC_IN pins
+* ------------------------------------------------------------------
+* Driver -> [Rs] -> seg0 -> tap1 -> seg -> tap2 -> seg -> tap3 -> seg -> tap4 -> [Rterm+Cterm]
+* Each tap: short stub -> receiver model (package L/R, pad C, Cin, ESD diodes)
+*
+* Datasheet values (kicad/DOCS/CH32L103DS0.PDF, Table 3-10, PDF p.46 / printed 43):
+*   Cin(HSE) = 5 pF typ, IL = +-1 uA, VIH >= 0.8*VDD, VIL <= 0.2*VDD, 3..25 MHz
+* Everything else (package L/R, pad C, ESD diodes, driver, trace) is an ESTIMATE.
+*
+* Run standalone:  ngspice flyby_clock.cir
+* Change the params below; to add MCUs copy a seg/stub/XU line set.
+* ------------------------------------------------------------------
+
+.param VDD=3.3
+.param FCLK=8e6
+.param TR=1n             ; driver rise/fall time
+.param ROUT=20           ; driver output resistance (CMOS osc/buffer ~10-30 ohm)
+.param RS=33             ; source series termination (0 = none)
+.param RTERM=27          ; far-end AC termination R (set CTERM tiny to disable)
+.param CTERM=1f          ; far-end AC termination C (e.g. 100p to enable)
+
+* trace: Z0 and delay per cm (50 ohm microstrip on FR4 ~ 67 ps/cm)
+.param Z0=50
+.param TPD=67p           ; s per cm
+.param SPACING=2         ; cm between MCUs
+.param LEAD=1            ; cm from driver to first MCU
+.param STUB=0.2          ; cm stub from main line to each OSC_IN pad
+
+* ---------------- supply ----------------
+VDDS vdd 0 {VDD}
+
+* ---------------- driver ----------------
+VCLK drv_int 0 PULSE(0 {VDD} 20n {TR} {TR} {0.5/FCLK-TR} {1/FCLK})
+RDRV drv_int drv {ROUT}
+RSER drv n0 {RS+1m}
+
+* ---------------- main line ----------------
+T0 n0 0 n1 0 Z0={Z0} TD={TPD*LEAD}
+T1 n1 0 n2 0 Z0={Z0} TD={TPD*SPACING}
+T2 n2 0 n3 0 Z0={Z0} TD={TPD*SPACING}
+T3 n3 0 n4 0 Z0={Z0} TD={TPD*SPACING}
+
+* ---------------- far-end AC termination ----------------
+RT n4 nt {RTERM}
+CT nt 0 {CTERM}
+
+* ---------------- stubs + receivers ----------------
+TS1 n1 0 s1 0 Z0={Z0} TD={TPD*STUB}
+TS2 n2 0 s2 0 Z0={Z0} TD={TPD*STUB}
+TS3 n3 0 s3 0 Z0={Z0} TD={TPD*STUB}
+TS4 n4 0 s4 0 Z0={Z0} TD={TPD*STUB}
+XU1 s1 pin1 vdd OSC_IN_RX
+XU2 s2 pin2 vdd OSC_IN_RX
+XU3 s3 pin3 vdd OSC_IN_RX
+XU4 s4 pin4 vdd OSC_IN_RX
+
+* Receiver: pad -> package -> die node (Cin + ESD clamps)
+.subckt OSC_IN_RX pad die vdd
+CPAD pad 0 0.7p           ; pad + via (estimate)
+LPKG pad a 0.7n           ; QFN32 lead/bond inductance (estimate)
+RPKG a die 0.1            ; (estimate)
+CIN die 0 5p              ; datasheet Cin(HSE) typ
+RLKG die 0 3.3Meg         ; ~ IL 1 uA at 3.3 V
+DUP die vdd DESD          ; ESD clamp to VDD (estimate)
+DDN 0 die DESD            ; ESD clamp to GND (estimate)
+.model DESD D(IS=1e-14 N=1.05 RS=5 CJO=0.3p)
+.ends
+
+.tran 10p 400n 0 10p
+
+.control
+set noaskquit
+* Measured on the 3rd rising edge (starts at 20n + 2/FCLK = 270 ns), window 265..330 ns.
+*  t066/t264 : time the pin crosses 0.66 V / 2.64 V (VIL/VIH limits of OSC_IN)
+*  vmax/vmin : overshoot / undershoot
+*  n2nd      : a 2nd upward crossing of 2.64 V in the window = ringing back
+*              through the threshold (should FAIL to measure = good)
+foreach case 1 2 3
+  if $case = 1
+    echo "=== CASE 1: source series R = 33 ohm, no far-end termination ==="
+    alterparam RS=33
+    alterparam CTERM=1f
+  end
+  if $case = 2
+    echo "=== CASE 2: no series R, far-end AC termination 27 ohm + 100 pF ==="
+    alterparam RS=0
+    alterparam CTERM=100p
+  end
+  if $case = 3
+    echo "=== CASE 3: no series R, no termination (baseline) ==="
+    alterparam RS=0
+    alterparam CTERM=1f
+  end
+  reset
+  run
+  foreach p pin1 pin2 pin3 pin4
+    meas tran t066_$p when v($p)=0.66 rise=1 from=265n to=330n
+    meas tran t264_$p when v($p)=2.64 rise=1 from=265n to=330n
+    meas tran n2nd_$p when v($p)=2.64 rise=2 from=265n to=330n
+    meas tran vmax_$p max v($p) from=265n to=330n
+    meas tran vmin_$p min v($p) from=330n to=395n
+  end
+  * waveforms for plotting (ASCII columns: time, v(...) pairs)
+  set fname = flyby_case{$case}.txt
+  wrdata $fname v(drv) v(pin1) v(pin2) v(pin3) v(pin4)
+end
+.endc
+
+.end

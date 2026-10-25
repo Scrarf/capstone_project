@@ -3,3 +3,4 @@
 design-backups*
 _autosave*
 .claude/
+*.dat.ngspice
