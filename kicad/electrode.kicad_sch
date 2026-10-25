@@ -1022,6 +1022,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 110.49) (xy 168.91 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7679b627-bc21-4b74-8b37-93738be8955d")
+	)
+	(wire
+		(pts
 			(xy 124.46 36.83) (xy 133.35 36.83)
 		)
 		(stroke
@@ -1051,6 +1061,17 @@
 			(justify right)
 		)
 		(uuid "53c60137-b72d-430a-be95-72338eba41d9")
+	)
+	(hierarchical_label "CLK_OUT"
+		(shape input)
+		(at 186.69 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fe743796-0739-4a06-bb0b-6ec14efa2a11")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1240,7 +1261,7 @@
 				)
 			)
 		)
-		(property "Footprint" "easyeda2kicad:QFN-32_L4.0-W4.0-P0.40-BL-EP2.7-A"
+		(property "Footprint" "LIB:QFN-32_L4.0-W4.0-P0.40-BL-EP2.7-A"
 			(at 142.24 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -1448,7 +1469,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 134.3152 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -1530,7 +1551,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 149.5552 44.45 0)
 			(hide yes)
 			(show_name no)
