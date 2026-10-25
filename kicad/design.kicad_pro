@@ -648,7 +648,7 @@
         "uuid": "bf91a2a1-39e8-4288-9578-4f96a46c0a9c"
       }
     ],
-    "used_designators": "C1-2,#PWR1-2,U1",
+    "used_designators": "TP1-13,R1-4,C1-7,#PWR1-13,U1-4",
     "variants": []
   },
   "sheets": [
@@ -659,6 +659,26 @@
     [
       "81c89536-a9d9-4069-a961-2d1af13393cf",
       "electrode"
+    ],
+    [
+      "7a32c0aa-4b56-43fb-bb82-cb1311529e5c",
+      "electrode1"
+    ],
+    [
+      "8b4ae7b6-1623-4a53-8ea2-9cf0cc95733c",
+      "electrode2"
+    ],
+    [
+      "d1e73a2b-e7f4-497d-9981-17c6adb7b0bf",
+      "frontend"
+    ],
+    [
+      "a9a49a3a-c0db-4b55-aae5-af8046a4c247",
+      "frontend1"
+    ],
+    [
+      "958a72d3-e2bb-4862-9bdd-e933d87e5463",
+      "frontend2"
     ]
   ],
   "text_variables": {},
