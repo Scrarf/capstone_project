@@ -5,9 +5,8 @@
 	(uuid "86925049-a7dd-40a8-81a0-84882d0674de")
 	(paper "A4")
 	(title_block
-		(title "Main MCU board - DAC output stage")
+		(title "DAC output stage")
 		(date "2026-10-31")
-		(comment 1 "DAC7811 + OPA197, single supply, 0..11.5 V")
 	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:OPA197xDBV"
@@ -500,7 +499,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "EasyEDA:DAC7811IDGSR"
+		(symbol "LIB:DAC7811IDGSR"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -526,7 +525,7 @@
 					)
 				)
 			)
-			(property "Footprint" "EasyEDA:VSSOP-10_L3.0-W3.0-P0.50-LS4.9-BL"
+			(property "Footprint" "LIB:VSSOP-10_L3.0-W3.0-P0.50-LS4.9-BL"
 				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -809,7 +808,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "EasyEDA:REF5050AIDR"
+		(symbol "LIB:REF5050AIDR"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -835,7 +834,7 @@
 					)
 				)
 			)
-			(property "Footprint" "EasyEDA:SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL"
+			(property "Footprint" "LIB:SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL"
 				(at 0 -11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5015,7 +5014,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "EasyEDA:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
+		(property "Footprint" "LIB:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
 			(at 87.63 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -5957,7 +5956,7 @@
 		)
 	)
 	(symbol
-		(lib_id "EasyEDA:REF5050AIDR")
+		(lib_id "LIB:REF5050AIDR")
 		(at 142.24 120.65 0)
 		(unit 1)
 		(body_style 1)
@@ -5987,7 +5986,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EasyEDA:SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL"
+		(property "Footprint" "LIB:SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL"
 			(at 142.24 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -6678,7 +6677,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "EasyEDA:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
+		(property "Footprint" "LIB:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
 			(at 200.66 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6839,7 +6838,7 @@
 		)
 	)
 	(symbol
-		(lib_id "EasyEDA:DAC7811IDGSR")
+		(lib_id "LIB:DAC7811IDGSR")
 		(at 142.24 76.2 0)
 		(unit 1)
 		(body_style 1)
@@ -6869,7 +6868,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EasyEDA:VSSOP-10_L3.0-W3.0-P0.50-LS4.9-BL"
+		(property "Footprint" "LIB:VSSOP-10_L3.0-W3.0-P0.50-LS4.9-BL"
 			(at 142.24 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -7319,7 +7318,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "EasyEDA:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
+		(property "Footprint" "LIB:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
 			(at 154.94 45.72 0)
 			(hide yes)
 			(show_name no)
