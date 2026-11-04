@@ -676,6 +676,10 @@
     [
       "319c5d9a-a63a-4d13-8a93-3f6281babb71",
       "frontend"
+    ],
+    [
+      "453a584a-a91b-46f2-b025-c35b28a62371",
+      "Main_MCU"
     ]
   ],
   "text_variables": {},
