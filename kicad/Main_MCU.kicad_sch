@@ -1488,12 +1488,6 @@
 		(uuid "2062e9d3-be05-479c-942a-4ac50bfd6dd2")
 	)
 	(junction
-		(at 215.9 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02e0d8e5-80d6-53d2-84ed-57e4b29a42ec")
-	)
-	(junction
 		(at 173.99 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1570,12 +1564,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a1a48f10-e1bb-4d2a-abd4-250ad16ff545")
-	)
-	(junction
-		(at 231.14 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ac809656-51cd-4c9f-9b30-194c9a89f32c")
 	)
 	(junction
 		(at 152.4 31.75)
@@ -1729,16 +1717,6 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 48.26) (xy 218.44 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f8033cf-f7f0-53ba-9321-d6d35f87b895")
-	)
-	(wire
-		(pts
 			(xy 127 48.26) (xy 147.32 48.26)
 		)
 		(stroke
@@ -1869,16 +1847,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 48.26) (xy 231.14 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "607ec6a8-4964-4112-9e2f-855bf1c9a886")
-	)
-	(wire
-		(pts
 			(xy 198.12 31.75) (xy 198.12 40.64)
 		)
 		(stroke
@@ -1906,16 +1874,6 @@
 			(type default)
 		)
 		(uuid "7467a3bf-ec11-5067-b698-317ba6e73746")
-	)
-	(wire
-		(pts
-			(xy 226.06 48.26) (xy 236.22 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "78c1a588-abe5-4725-a42f-b941a26a19fa")
 	)
 	(wire
 		(pts
@@ -4612,7 +4570,7 @@
 		)
 	)
 	(label "DAC_OUT"
-		(at 236.22 48.26 0)
+		(at 215.9 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4763,83 +4721,6 @@
 			(project "design"
 				(path "/bf91a2a1-39e8-4288-9578-4f96a46c0a9c/453a584a-a91b-46f2-b025-c35b28a62371"
 					(reference "#PWR039")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 231.14 58.42 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "12c1aaf4-d51b-4bd5-bb41-70758476aa31")
-		(property "Reference" "#PWR042"
-			(at 231.14 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 231.14 63.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 231.14 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 231.14 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "28fa2c21-1c53-4a39-8106-d6d1a636b806")
-		)
-		(instances
-			(project "design"
-				(path "/bf91a2a1-39e8-4288-9578-4f96a46c0a9c/453a584a-a91b-46f2-b025-c35b28a62371"
-					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -6748,87 +6629,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 231.14 54.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c220861d-bcbc-4b68-a54e-824a177ebe35")
-		(property "Reference" "R26"
-			(at 233.68 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100K"
-			(at 233.68 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 231.14 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Bias resistor: references the AC-coupled DAC_OUT to 0 V"
-			(at 231.14 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4520bcc3-02fd-4a90-ae52-388967a2efee")
-		)
-		(pin "2"
-			(uuid "786ba8a0-d579-4704-a08a-3216d2578495")
-		)
-		(instances
-			(project "design"
-				(path "/bf91a2a1-39e8-4288-9578-4f96a46c0a9c/453a584a-a91b-46f2-b025-c35b28a62371"
-					(reference "R26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Amplifier_Operational:OPA197xDBV")
 		(at 200.66 48.26 0)
 		(unit 1)
@@ -7809,85 +7609,6 @@
 			(project "design"
 				(path "/bf91a2a1-39e8-4288-9578-4f96a46c0a9c/453a584a-a91b-46f2-b025-c35b28a62371"
 					(reference "#PWR031")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 222.25 48.26 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ea07add3-9d48-4653-9331-ca1d55d8c886")
-		(property "Reference" "C20"
-			(at 222.25 44.45 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1uF"
-			(at 222.25 52.07 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 222.25 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 222.25 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "DC-blocking capacitor: DAC_OUT swings around 0 V (rated >=25 V, sits at ~5.75 V DC)"
-			(at 222.25 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dfb078fb-2475-491c-bcc1-02d1774c9791")
-		)
-		(pin "2"
-			(uuid "280ce7bb-3041-4f5c-9945-7e8c871c47ed")
-		)
-		(instances
-			(project "design"
-				(path "/bf91a2a1-39e8-4288-9578-4f96a46c0a9c/453a584a-a91b-46f2-b025-c35b28a62371"
-					(reference "C20")
 					(unit 1)
 				)
 			)
