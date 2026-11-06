@@ -653,7 +653,7 @@
         "uuid": "bf91a2a1-39e8-4288-9578-4f96a46c0a9c"
       }
     ],
-    "used_designators": "#PWR1-13,C1-7,R1-4,TP1-13,U1-4",
+    "used_designators": "#PWR1-13,#PWR15-16,#PWR18-19,#PWR22,#PWR43-52,C1-7,R1-4,TP1-13,U1-4",
     "variants": []
   },
   "sheets": [
@@ -666,11 +666,11 @@
       "electrode"
     ],
     [
-      "7a32c0aa-4b56-43fb-bb82-cb1311529e5c",
+      "86dbceba-02b5-43bb-8215-6a735cd57efb",
       "electrode1"
     ],
     [
-      "8b4ae7b6-1623-4a53-8ea2-9cf0cc95733c",
+      "80fb0bef-2c53-4bc1-bdfd-f513f009b6b9",
       "electrode2"
     ],
     [
@@ -680,6 +680,10 @@
     [
       "453a584a-a91b-46f2-b025-c35b28a62371",
       "Main_MCU"
+    ],
+    [
+      "bdc5ecef-6393-4658-acea-36ba401262e8",
+      "electrode3"
     ]
   ],
   "text_variables": {},

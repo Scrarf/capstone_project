@@ -4,3 +4,6 @@ design-backups*
 _autosave*
 .claude/
 *.dat.ngspice
+
+# Claude handoff notes, keep local
+PROJECT_HANDOFF.txt
