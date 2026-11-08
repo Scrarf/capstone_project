@@ -603,16 +603,59 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC Part",
+          "name": "LCSC Part",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
-    "bus_aliases": {},
+    "bus_aliases": {
+      "DAC": [
+        "SCLK",
+        "SDIN",
+        "SDO",
+        "~{SYNC}"
+      ]
+    },
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -653,7 +696,7 @@
         "uuid": "bf91a2a1-39e8-4288-9578-4f96a46c0a9c"
       }
     ],
-    "used_designators": "#PWR1-13,#PWR15-16,#PWR18-19,#PWR22,#PWR43-52,C1-7,C21-25,D2-4,J1-4,Q1-6,R1-4,R9-10,R12-13,R15-16,R19-21,R27-30,TP1-13,TP17-18,TP20-21,TP23-28,U1-4,U10",
+    "used_designators": "#PWR1-13,#PWR15-16,#PWR18-19,#PWR22,#PWR43-53,C1-7,C21-26,D2-4,J1-9,Q1-8,R1-4,R9-10,R12-13,R15-16,R19-21,R27-34,TP1-13,TP17-18,TP20-21,TP23-30,U1-4,U10-12",
     "variants": []
   },
   "sheets": [
@@ -688,6 +731,10 @@
     [
       "3b6140d1-e05e-48f5-bf99-14dd0c63900c",
       "MAIN_MCU"
+    ],
+    [
+      "9d388d31-0288-43f7-8acd-3671abfd04bc",
+      "IMU"
     ]
   ],
   "text_variables": {},
