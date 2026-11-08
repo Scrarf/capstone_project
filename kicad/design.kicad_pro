@@ -653,7 +653,7 @@
         "uuid": "bf91a2a1-39e8-4288-9578-4f96a46c0a9c"
       }
     ],
-    "used_designators": "#PWR1-13,#PWR15-16,#PWR18-19,#PWR22,#PWR43-52,C1-7,R1-4,TP1-13,U1-4",
+    "used_designators": "#PWR1-13,#PWR15-16,#PWR18-19,#PWR22,#PWR43-52,C1-7,C21-25,D2-4,J1-4,Q1-6,R1-4,R9-10,R12-13,R15-16,R19-21,R27-30,TP1-13,TP17-18,TP20-21,TP23-28,U1-4,U10",
     "variants": []
   },
   "sheets": [
@@ -663,27 +663,31 @@
     ],
     [
       "81c89536-a9d9-4069-a961-2d1af13393cf",
-      "electrode"
+      "ELECTRODE"
     ],
     [
-      "86dbceba-02b5-43bb-8215-6a735cd57efb",
-      "electrode1"
+      "048cabb4-7f06-478b-b2b5-3cd05fc34c0c",
+      "ELECTRODE1"
     ],
     [
-      "80fb0bef-2c53-4bc1-bdfd-f513f009b6b9",
-      "electrode2"
+      "752eb41e-1e81-4db6-9c00-891683e5e8ab",
+      "ELECTRODE2"
     ],
     [
       "319c5d9a-a63a-4d13-8a93-3f6281babb71",
-      "frontend"
+      "FRONTEND"
     ],
     [
       "453a584a-a91b-46f2-b025-c35b28a62371",
-      "Main_MCU"
+      "DAC"
     ],
     [
-      "bdc5ecef-6393-4658-acea-36ba401262e8",
-      "electrode3"
+      "b535f4b9-4084-447e-a43d-20c935fa443e",
+      "ELECTRODE3"
+    ],
+    [
+      "3b6140d1-e05e-48f5-bf99-14dd0c63900c",
+      "MAIN_MCU"
     ]
   ],
   "text_variables": {},
